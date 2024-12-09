@@ -1,3 +1,5 @@
+using HclsPro.DataAccess.IRepositories;
+using HclsPro.DataAccess.Repositories;
 using HclsPro.DBContext;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<HCLSDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConStrLocal")));
+builder.Services.AddTransient<IAdminTypesRepository, AdminTypesRepository>();
+builder.Services.AddTransient<IAdminRepository, AdminRepository>();
+
 
 
 var app = builder.Build();
