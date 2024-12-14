@@ -9,6 +9,6 @@ namespace HclsPro.Models
         [Key] 
         public int AdminTypeId {  get; set; }
         public string AdminTypeName { get; set; }
-        public ICollection<Admin> Admin {  get; set; }
+        public ICollection<Admin>? Admin { get; set; }
     }
 }

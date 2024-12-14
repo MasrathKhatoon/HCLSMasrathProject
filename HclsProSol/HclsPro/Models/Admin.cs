@@ -17,6 +17,6 @@ namespace HclsPro.Models
         public bool ActiveStatus { get; set; }
         [ForeignKey("AdminTypes")]
         public int AdminTypeId { get; set; }
-        public AdminTypes AdminTypes { get; set; }
+        public AdminTypes? AdminTypes { get; set; }
     }
 }
