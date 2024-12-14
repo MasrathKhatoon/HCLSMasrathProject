@@ -133,7 +133,7 @@ namespace HclsPro.Controllers
             try
             {
                 var Admindelete = await adminRef.DeleteAdmin(AdminId);
-                if (Admindelete  > 0)
+                if (Admindelete > 0)
                 {
                     return Ok(Admindelete + "Record deleted...!");
                 }
